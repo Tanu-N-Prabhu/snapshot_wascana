@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Responsive navigation bar</title>
+  <link rel="stylesheet" href="./hdphotosstyles.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="nav">
+			<div class="container">
+				<div class="nav-logo">
+				<a href="#" class="nav-logo-link">Wascana Lake Gallery</a>
+			</div>
+			<div class="nav-menu">
+				<a href="index.html" class="nav-menu-link">Home</a>
+				<a href="about.html" class="nav-menu-link">About</a>
+				<a href="video.html" class="nav-menu-link">Videos</a>
+				<a href="#" class="nav-menu-link">Project</a>
+                <a href="hdphotos.html" class="nav-menu-link">HD Photos</a>
+
+			</div>
+			<div class="nav-burger">
+				<a href="#" class="nav-burger-link">
+					<span class="nav-burger-item "></span>
+				</a>
+			</div>
+			</div>
+		</nav>
+<br>
+    <br>
+    
+    
+    <div class="row">
+        
+      <div class="column">
+        <img src="Img/Timphotos/5.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Img/Timphotos/2.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/3.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/4.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+  
+  
+   
+</div>
+    
+    
+    <br>
+    <br>
+    
+    <div class="row">
+        
+      <div class="column">
+        <img src="Img/Timphotos/7.jpg" style="width:90%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Img/Timphotos/8.jpg" style="width:90%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/9.jpg" style="width:90%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/10.jpg" style="width:90%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+      </div>
+  
+   
+</div>
+    
+    
+    <br>
+    <br>
+    
+    <div class="row">
+        
+        
+ 
+   
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="Img/Timphotos/5.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="Img/Timphotos/2.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="Img/Timphotos/3.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="Img/Timphotos/4.jpg" style="width:100%">
+    </div>
+      
+          <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="Img/Timphotos/7.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="Img/Timphotos/8.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="Img/Timphotos/9.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="Img/Timphotos/10.jpg" style="width:100%">
+    </div>
+      
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/5.jpg" style="width:100%" onclick="currentSlide(1)" alt="A flock of geese">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Aerial view of regina">
+    </div>
+    
+      <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Nature and sunrise">
+    </div>
+      
+      <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Nature and sunrise">
+    </div>
+      
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/7.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/8.jpg" style="width:100%" onclick="currentSlide(6)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/9.jpg" style="width:100%" onclick="currentSlide(7)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/10.jpg" style="width:100%" onclick="currentSlide(8)" alt="Nature and sunrise">
+    </div>
+      
+  </div>
+</div>
+    
+    
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+</body>
+</html>
+
+    
+    
