@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
+
 }
 
 .container {
@@ -51,7 +52,7 @@ body {
 .nav-logo  a:after {
     content: " ";
     position: absolute;
-    display: block;
+    display: flex;
     bottom: 1;
     padding: 1px;
     left: -200%;
@@ -75,11 +76,13 @@ body {
   .nav-menu {
     position: fixed;
     top: 0;
+
     right: 0;
     background-color: black;
     flex-direction: column;
     width: 200px;
     height: 110vh;
+      overflow-y: scroll;
     justify-content: space-evenly;
     align-items: center;
     transform: translateX(100%);
@@ -367,19 +370,21 @@ p{
 }
 
 
+
 /* For the block quote */
 blockquote{
-  font-size: 1.4em;
+  font-size: 1.5em;
   width:100%;
-  margin:50px auto;
   font-family:Open Sans;
   font-style:italic;
   color: white;
   padding:1.2em 30px 1.2em 75px;
   border-left:8px solid red ;
   line-height:1.6;
-  position: relative;
+  position: inherit;
   background: black;
+  text-align: justify;
+
 }
 
 blockquote::before{
@@ -387,11 +392,9 @@ blockquote::before{
   content: "\201C";
   color:black;
   font-size:4em;
-  position: absolute;
-  left: 10px;
-  top:-10px;
-    
-  display: block;
+  left: 25px;
+margin-top: -50px;
+  
   position: absolute;
 
   width: 30px; 
@@ -415,4 +418,162 @@ blockquote span{
   font-style: normal;
   font-weight: bold;
   margin-top:1em;
+}
+
+
+
+
+
+
+/* STYLES SPECIFIC TO FOOTER  */
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: black;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: white;
+font-weight: bolder;
+
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: white;
+  font-size: 10px;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .footer .col {
+    width: 33%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* For the block quote */
+blockquote{
+  font-size: 1em;
+  width:100%;
+  font-family:Open Sans;
+  font-style:italic;
+  color: white;
+  padding:1.2em 30px 1.2em 50px;
+  border-left:8px solid red ;
+  line-height:1.6;
+  position: inherit;
+        text-align: start;
+
+  background: black;
+}
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:black;
+  font-size:5em;
+  left: 25px;
+margin-top: -50px;
+  
+  position: absolute;
+
+  width: 30px; 
+  height: 30px;
+ 
+  transition:all .4s;
+
+}
+
+blockquote:hover:before{
+  color:white;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:white;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+
 }
