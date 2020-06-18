@@ -416,8 +416,11 @@ blockquote span{
   display:block;
   color:white;
   font-style: normal;
-  font-weight: bold;
   margin-top:1em;
+    font-family:Open Sans;
+  font-style:italic;
+    font-weight: bold;
+
 }
 
 
@@ -571,7 +574,6 @@ blockquote span{
   display:block;
   color:white;
   font-style: normal;
-  font-weight: bold;
   margin-top:1em;
 }
 
