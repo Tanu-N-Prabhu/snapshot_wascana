@@ -1,0 +1,847 @@
+<!-- 
+
+Code Info: Home Page
+This page contains the HTML code for the home page.
+Author: Tanu Nanda Prabhu
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place to add new libraries -->
+    <!-- Necessary libraries used for the home page -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- This is the link for the CSS of the home page -->
+    
+</head>
+    <style>
+    /* This is the CSS page for the home page.  */
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+background-color: black;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 50vh;
+  }
+}
+
+
+.nav {
+  padding: 20px 0;
+  background-color: black;
+}
+
+.nav-logo-link:link, .nav-logo-link:visited {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+ .nav-logo a {
+    overflow-x: hidden;
+    position: relative;
+    transition: .25s ease all;
+    line-height: 45px;
+}
+
+.nav-logo  a:after {
+    content: " ";
+    position: absolute;
+    display: flex;
+    bottom: 1;
+    padding: 1px;
+    left: -200%;
+    height: 5px;
+    width: 100%;
+    background: red;
+    transition: .5s ease all;
+}
+
+.nav-logo a:hover:after {
+    left: 0;
+}
+
+
+.nav-menu {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 600px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+
+    right: 0;
+    background-color: black;
+    flex-direction: column;
+    width: 200px;
+    height: 110vh;
+      overflow-y: scroll;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all .1s ease;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+}
+
+.nav-menu-link:link, .nav-menu-link:visited {
+  text-decoration: none;
+  color: white;
+  transition: all .1s ease;
+  font-size: 18px;
+}
+
+.nav-burger {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .nav-burger {
+    display: block;
+  }
+}
+
+ .nav-menu a {
+    overflow-x: hidden;
+    position: relative;
+    transition: .25s ease all;
+    line-height: 45px;
+}
+
+.nav-menu a:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: -100%;
+    height: 5px;
+    width: 100%;
+    background: red;
+    transition: .5s ease all;
+}
+
+.nav-menu a:hover:after {
+    left: 0;
+}
+
+
+.nav-burger-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+}
+
+.nav-burger-item, .nav-burger-item::after, .nav-burger-item::before {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: white;
+}
+
+.nav-burger-item {
+  position: relative;
+  transition: all .1s ease;
+}
+
+.nav-burger-item::after, .nav-burger-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  transition: all .2s ease;
+}
+
+.nav-burger-item::after {
+  top: 7px;
+}
+
+.nav-burger-item::before {
+  top: -7px;
+}
+
+.closed .nav-burger-item::after, .closed .nav-burger-item::before {
+  top: 0;
+}
+.closed .nav-burger-item {
+  background-color: transparent;
+}
+.closed .nav-burger-item::after {
+  transform: rotate(135deg);
+}
+.closed .nav-burger-item::before {
+  transform: rotate(-135deg);
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top:45px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: red;
+  position: absolute;
+  top: 1px;
+  right: 25px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red;
+}
+
+
+a{
+color: blue;
+}
+
+
+.responsive {
+  width: 100%;
+  height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    border-radius: 50px;
+
+}
+
+
+
+
+h1{
+    color: white;
+}
+p{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-distributed {
+  background-color: #000;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 5px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 40%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+}
+
+.footer-distributed .footer-center p a {
+  color: #5383d3;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+.footer-icons a:hover{
+    color: red;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+    /* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+    
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+
+    
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+
+li{
+    color: white;
+    list-style: none;
+}
+
+a{
+    color: white;
+text-decoration: none;
+}
+
+a:hover {
+  color: red;
+   
+
+}
+
+h5{
+    color: white
+}
+
+a.design: hover{
+    color: red;
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+<body>
+    
+    
+<!--------------------------------------------------------------------------------------------->   
+
+    <!--
+    Credits: Marta Aladova
+    Link: https://codepen.io/xakunamatata/pen/WNNjadr
+    This is the top navigation bar of the home page 
+    -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-logo">
+                <a href="#" class="nav-logo-link">Through the lens</a>
+            </div>
+            <div class="nav-menu">
+                <a href="hdphotos.html" class="nav-menu-link">Gallery</a>
+                <a href="video.html" class="nav-menu-link">Videos</a>
+                <a href="blog1.html" class="nav-menu-link">Blog</a>
+            </div>
+            <div class="nav-burger">
+                <a href="#" class="nav-burger-link">
+                    <span class="nav-burger-item "></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+<!--------------------------------------------------------------------------------------------->   
+
+   <div class="row">
+        
+      <div class="column">
+        <img src="Img/Timphotos/5.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Img/Timphotos/2.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/3.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/4.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+  
+  
+   
+</div>
+    
+    
+    <br>
+    <br>
+    
+    <div class="row">
+        
+      <div class="column">
+        <img src="Img/Timphotos/7.jpg" style="width:90%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Img/Timphotos/8.jpg" style="width:90%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/9.jpg" style="width:90%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+      </div>
+        
+        <div class="column">
+        <img src="Img/Timphotos/10.jpg" style="width:90%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+      </div>
+  
+   
+</div>
+    
+    
+    <br>
+    <br>
+    
+    <div class="row">
+        
+        
+ 
+   
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="Img/Timphotos/5.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="Img/Timphotos/2.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="Img/Timphotos/3.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="Img/Timphotos/4.jpg" style="width:100%">
+    </div>
+      
+          <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="Img/Timphotos/7.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="Img/Timphotos/8.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="Img/Timphotos/9.jpg" style="width:100%">
+    </div>
+      
+      <div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="Img/Timphotos/10.jpg" style="width:100%">
+    </div>
+      
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/5.jpg" style="width:100%" onclick="currentSlide(1)" alt="A flock of geese">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Aerial view of regina">
+    </div>
+    
+      <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Nature and sunrise">
+    </div>
+      
+      <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Nature and sunrise">
+    </div>
+      
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/7.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/8.jpg" style="width:100%" onclick="currentSlide(6)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/9.jpg" style="width:100%" onclick="currentSlide(7)" alt="Nature and sunrise">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="Img/Timphotos/10.jpg" style="width:100%" onclick="currentSlide(8)" alt="Nature and sunrise">
+    </div>
+      
+  </div>
+</div>
+    
+
+
+ <!--------------------------------------------------------------------------------------------->   
+    <!-- 
+    Credits: Cory Barro
+    Link:  https://codepen.io/disc_doctor/pen/aRWNwx
+    Description: This is the footer code
+    -->
+    
+    <footer class="footer-distributed">
+        
+    <div class="footer-left">
+
+        <p class="footer-company-about">
+            <li><a href = "">Through the lens</a></li>
+            <br>
+            <li><a href = "">Gallery</a></li>
+            <br>
+            <li><a href = "">Videos</a></li>
+            <br>
+            <li><a href = "">Blog</a></li>
+        </p>
+
+    </div>
+        
+      <div class="footer-center">
+
+        <li><i class="fa fa-map-marker"></i>
+        <p><span>Wascana Parkway, S4S 0A2</span> Regina, Canada</p></li>
+        <li><i class="fa fa-phone"></i>
+        <p>+1 587-216-2478</p></li>
+        <li> <i class="fa fa-envelope"></i>
+        <p><a href="mailto:nmrktphotography@gmail.com">nmrktphotography@gmail.com</a></p></li>
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>Purpose</span> This is a online photo gallery website
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+        <br>
+        <h5 align = "center"><b>Designed by </b><i><a class = "design" href="https://tanu-n-prabhu.github.io/myWebsite.io/">Tanu Nanda Prabhu</a></i></h5>
+        
+    </footer>
+
+
+<!--------------------------------------------------------------------------------------------->
+    
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+</body>
+</html>
