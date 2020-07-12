@@ -21,7 +21,9 @@ Author: Tanu Nanda Prabhu
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- This is the link for the CSS of the home page -->
-    
+    <!-- This is the style sheet reference of the icons for the navigation bar from fontawesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 </head>
     <style>
     /* This is the CSS page for the home page.  */
@@ -35,15 +37,15 @@ Author: Tanu Nanda Prabhu
 }
 
 body {
-  font-family: 'Roboto Condensed', sans-serif;
 background-color: black;
+font-family: "Lucida Console", Courier, monospace;
 }
+
 
 .container {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -220,7 +222,7 @@ background-color: black;
 }
 
 .row > .column {
-  padding: 0 8px;
+  padding: 0 8px ;
 }
 
 .row:after {
@@ -231,7 +233,7 @@ background-color: black;
 
 .column {
   float: left;
-  width: 25%;
+  width: 50%;
 }
 
 /* The Modal (background) */
@@ -618,10 +620,15 @@ a.design: hover{
                 <a href="#" class="nav-logo-link">Through the lens</a>
             </div>
             <div class="nav-menu">
-                <a href="hdphotos.html" class="nav-menu-link">Gallery</a>
-                <a href="video.html" class="nav-menu-link">Videos</a>
-                <a href="blog1.html" class="nav-menu-link">Blog</a>
+                
+                    
+                <a href="index.html" class="nav-menu-link"><i class="fas fa-home"></i> Home</a>
+                
+                <a href="galleryFrontPage.html" class="nav-menu-link"><i class="fas">&#xf302;</i> Gallery</a>
+                <a href="#" class="nav-menu-link"><i class="fa fa-rss"></i> Blog</a>
+                
             </div>
+            
             <div class="nav-burger">
                 <a href="#" class="nav-burger-link">
                     <span class="nav-burger-item "></span>
@@ -630,66 +637,311 @@ a.design: hover{
         </div>
     </nav>
     
-<!--------------------------------------------------------------------------------------------->   
+<!---------------------------------------------------------------------------------------------> 
 
    <div class="row">
         
       <div class="column">
-        <img src="Img/Timphotos/5.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        <img src="Nature/20200316_082912.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
       </div>
 
       <div class="column">
-        <img src="Img/Timphotos/2.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        <img src="Nature/20200321_185953.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
       </div>
-        
-        <div class="column">
-        <img src="Img/Timphotos/3.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-      </div>
-        
-        <div class="column">
-        <img src="Img/Timphotos/4.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-      </div>
-  
-  
-   
-</div>
+    
+    </div>
     
     
     <br>
     <br>
-    
-    <div class="row">
-        
+       <div class="row">
       <div class="column">
-        <img src="Img/Timphotos/7.jpg" style="width:90%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        <img src="Nature/20200321_185958.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
       </div>
 
       <div class="column">
-        <img src="Img/Timphotos/8.jpg" style="width:90%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        <img src="Nature/20200415_171835.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
       </div>
+    </div>
         
-        <div class="column">
-        <img src="Img/Timphotos/9.jpg" style="width:90%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-      </div>
-        
-        <div class="column">
-        <img src="Img/Timphotos/10.jpg" style="width:90%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-      </div>
-  
-   
-</div>
     
-    
+        <br>
     <br>
-    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200415_171845.jpg" style="width:90%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200415_173920.jpg" style="width:90%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
+    </div>
     
-    <div class="row">
-        
-        
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200416_194106.jpg" style="width:90%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200428_194621.jpg" style="width:90%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+      </div>
+    </div>
  
-   
-</div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200428_194616.jpg" style="width:90%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+      </div>
 
+      <div class="column">
+        <img src="Nature/20200428_194614.jpg" style="width:90%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+      </div>
+    </div>
+   
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200428_195017.jpg" style="width:90%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200428_195809.jpg" style="width:90%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200501_205334.jpg" style="width:90%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200507_190746.jpg" style="width:90%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+      </div>
+    </div>
+
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200507_190749.jpg" style="width:90%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200507_190751.jpg" style="width:90%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200507_195332.jpg" style="width:90%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200507_195345.jpg" style="width:90%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200507_195353.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200507_195828.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200507_201937.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200508_163431.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200508_181243.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200508_183436.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_190743.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_190747.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_191104.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_191603.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_191812.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_191821.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_191822.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_191830.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192219.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_192226.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192323.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_192419.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192421.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_192443.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192625.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_192707.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192806.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_192811.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_192953.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_193643.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_193724.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_193727.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+    
+        <br>
+    <br>
+       <div class="row">
+      <div class="column">
+        <img src="Nature/20200509_193800.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+
+      <div class="column">
+        <img src="Nature/20200509_193941.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+
+    
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
@@ -807,7 +1059,7 @@ a.design: hover{
         
       <div class="footer-center">
 
-        <li><i class="fa fa-map-marker"></i>
+        <li><i class="fas fa-map-marker-alt"></i>
         <p><span>Wascana Parkway, S4S 0A2</span> Regina, Canada</p></li>
         <li><i class="fa fa-phone"></i>
         <p>+1 587-216-2478</p></li>
@@ -823,10 +1075,10 @@ a.design: hover{
 
         <div class="footer-icons">
 
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
 
         </div>
 
